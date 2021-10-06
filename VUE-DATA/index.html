@@ -132,13 +132,18 @@
                 <p v-for="value,key in userListObj">{{ key +","+ value}}</p>
 
                 <!-- number render -->
-                <span v-for="number in 10">{{ number }},</span>
+                <span v-for="number of 10">{{ number }},</span>
+                <my-component :my-age ="age"></my-component>
             </div>
         </div>
     </div>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js'></script>
    
     <script>
+            Vue.component('my-component',{
+                props:['myAge'],
+                template:`<div>{{ myAge }}</div>`,
+            });
             // 控制section5
             let vm = new Vue({
                 el:'#section5',
