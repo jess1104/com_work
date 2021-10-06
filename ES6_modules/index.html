@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        margin: auto;
+        width: 960px;
+        /* height: 500px; */
+        background-color: rgb(248, 146, 78);
+      }
+      .col {
+        width: 300px;
+        height: 200px;
+        margin: 10px;
+        background-color: cyan;
+        float: left;
+      }
+      .clear-fix {
+        /* width: 100%; */
+        clear: both;
+        height: 10px;
+        background-color: darkmagenta;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="col">111</div>
+      <div class="col">222</div>
+      <div class="col">333</div>
+      <div class="clear-fix"></div>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

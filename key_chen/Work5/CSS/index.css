@@ -1,0 +1,807 @@
+html {
+    background-image: url("../images/ce37f6286fc1ab5b2113c1b0c5b9948d.png");
+    overflow-y: scroll !important;
+}
+
+.backgroundRed {
+    background-color: red;
+}
+
+.backgroundGreen {
+    background-color: Green;
+}
+
+.mainScroll {
+    height: 1000px;
+}
+
+.modal-body {
+    padding: 0px;
+}
+
+.modal-backdrop {
+    position: absolute;
+    width: 785px;
+    top: 40px;
+    left: 229px;
+    background-color: white;
+}
+
+.modal-backdrop.show {
+    opacity: 0.8;
+    height: 900px;
+}
+
+
+/* .modal-backdrop.show {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+} */
+
+
+/* .modal {
+    position: relative !important;
+    z-index: 9999 !important;
+} */
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    /* color: red; */
+    font-size: 50px;
+    z-index: 1041;
+    display: none;
+}
+
+body {
+    width: 73%;
+    height: 900px;
+    max-width: 1032px;
+    margin: 0px auto 120px;
+    background-color: white;
+    font-size: 1pt;
+    position: relative;
+    top: 120px;
+    padding-right: 0px !important;
+}
+
+.modal-content {
+    border-radius: 0px;
+    /* position: relative; */
+    /* left: 120px;
+    top: 20px; */
+    /* width: 100%; */
+}
+
+.main {
+    overflow-y: scroll;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 5px;
+}
+
+.main::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgba(175, 169, 169, 0.2);
+}
+
+.main::-webkit-scrollbar {
+    width: 15px;
+}
+
+.main::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(36, 35, 35, 0.2);
+    border: 3px solid white;
+}
+
+.mainHead {
+    display: flex;
+    line-height: 40px;
+}
+
+.mainHeadLeft {
+    flex: 2;
+    font-size: 14px;
+    background-color: rgb(50, 166, 222);
+    color: white;
+    line-height: 40px;
+}
+
+.mainHeadLeft img {
+    margin-right: 2px;
+    vertical-align: middle;
+}
+
+.mainHeadLeft img:nth-of-type(1) {
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    margin-right: 0px;
+}
+
+.mainHeadLeft div {
+    padding-left: 10px;
+}
+
+.mainHeadLeft span {
+    border-left: 1px solid rgb(185, 184, 184);
+    padding-left: 5px;
+}
+
+.mainHeadRight {
+    position: relative;
+    flex: 7;
+}
+
+.mainHeadCarousel {
+    position: relative;
+    width: 95%;
+    left: 35px;
+    overflow: hidden;
+    height: 35px;
+}
+
+.mainHeadRight img {
+    position: absolute;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.mainHeadCarouselItem {
+    color: rgb(50, 166, 222);
+    font-size: 14px;
+    position: absolute;
+    top: 5px;
+    left: 25px;
+    white-space: nowrap;
+}
+
+.mainHeadItem ul,
+.mainHeadItem ul li {
+    margin-left: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    vertical-align: bottom;
+}
+
+.mainHeadItem ul li {
+    font-size: 13px;
+    color: rgb(85, 84, 84);
+}
+
+.mainHeadItem ul,
+.mainHeadItem li {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+}
+
+.mainBody {
+    display: flex;
+    flex-direction: row;
+}
+
+.category {
+    flex: 2;
+    border-top: 1px solid black;
+    overflow-y: scroll;
+    height: 900px;
+    margin-right: 3px;
+}
+
+.category::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgba(184, 177, 177, 0.2);
+}
+
+.category::-webkit-scrollbar {
+    width: 13px;
+}
+
+.category::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgb(50, 166, 222);
+    outline: 1px solid rgb(175, 178, 180);
+}
+
+.categoryScorll {
+    height: 1000px;
+    padding-right: 3px;
+}
+
+
+/* .category::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(50, 166, 222);
+    border-radius: 10px;
+    background-color: darkcyan;
+}
+
+.category::-webkit-scrollbar-thumb {
+    color: rgb(50, 166, 222);
+    outline: 1px solid slategrey;
+}
+
+.category::-webkit-scrollbar-thrack {
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+
+.categoryMenu {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 40px;
+    padding-left: 10px;
+    background-color: rgb(50, 166, 222);
+}
+
+#category {
+    padding-left: 10px;
+}
+
+#category label:hover,
+.categoryMenuItem div:hover {
+    cursor: pointer;
+}
+
+.category label {
+    display: block;
+    font-size: 13px;
+    margin: 12px 0px;
+    position: relative;
+    color: rgb(138, 133, 133);
+}
+
+#category input {
+    margin-right: 8px;
+}
+
+#category span {
+    position: absolute;
+    right: 5px;
+}
+
+.categoryMenuItems {
+    display: flex;
+}
+
+.categoryMenuItems div:hover {
+    color: white;
+    background-color: rgb(50, 166, 222);
+    cursor: pointer;
+}
+
+.categoryMenuItems div {
+    flex: 1;
+    background-color: rgb(40, 38, 38);
+    padding: 10px 5px;
+    font-size: 13px;
+    color: rgb(138, 133, 133);
+    text-align: center;
+    border: 1px solid black;
+}
+
+.categoryMenuItem {
+    padding-left: 20px;
+}
+
+.categoryMenuItem img {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-bottom: 3px;
+    margin-right: 5px;
+}
+
+.categoryMenuItem div:first-child span:nth-of-type(1) {
+    right: 40px;
+    color: rgb(4, 4, 98);
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.categoryMenuItem div {
+    line-height: 40px;
+    font-size: 13px;
+    position: relative;
+    color: rgb(138, 133, 133);
+}
+
+.categoryMenuItem span {
+    position: absolute;
+    right: 5px;
+}
+
+.oddsTable {
+    flex: 7;
+}
+
+
+/* .oddsTableItems span:nth-of-type(2) {
+    color: rgb(41, 41, 144);
+} */
+
+.oddsTableItemSelect,
+.oddsTableItemSorts {
+    width: 10pt;
+    height: 10pt;
+}
+
+.oddsTableHead {
+    display: flex;
+    background-color: rgb(50, 166, 222);
+    border-bottom: 2px solid white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.oddsTableKind {
+    flex: 6.7;
+    line-height: 33px;
+    color: white;
+}
+
+.oddsTableItems {
+    display: flex;
+    flex: 8;
+    line-height: 33px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.oddsTableItems>div {
+    border-right: 1px solid rgb(146, 144, 144);
+    line-height: 23px;
+}
+
+.oddsTableItems div:nth-of-type(1) {
+    flex: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.oddsTableItems div div:nth-of-type(2) {
+    color: rgb(2, 61, 129);
+}
+
+.oddsTableItems div:nth-of-type(2),
+.oddsTableItems div:nth-of-type(3) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* align-self: flex-start; */
+    flex: 1.1;
+    /* border-right: 1px solid rgb(146, 144, 144); */
+}
+
+.oddsTableItems div:nth-of-type(4),
+.oddsTableItems div:nth-of-type(5) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0.5;
+}
+
+.oddsTableKind span:nth-of-type(2):hover {
+    background-color: white;
+    padding: 2px 5px;
+    padding-right: 7px;
+    color: darkblue;
+    border-radius: 3px;
+}
+
+.oddsTableKind span:nth-of-type(2) {
+    padding: 2px 5px;
+    border-radius: 3px;
+    padding-right: 7px;
+}
+
+.oddsTableKind span span:nth-of-type(1) {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.favAll {
+    background-color: darkblue;
+    color: white;
+    border-radius: 3px;
+    padding: 2px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.favAllStar {
+    cursor: pointer;
+}
+
+.favAllStar img {
+    margin-bottom: 5px;
+    margin-left: 8px;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+}
+
+.favAllStar span {
+    margin-left: 2px;
+}
+
+
+/* .oddsTableItems li {
+    border-right: 1px solid rgb(146, 144, 144);
+    margin-right: 5px;
+    padding-right: 8px;
+} */
+
+
+/* .oddsTableItems li:last-of-type {
+    border-right: none;
+} */
+
+.oddsTableItems img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-bottom: 3px;
+}
+
+.oddsTableHeadGame {
+    color: rgba(233, 217, 217, 0.897);
+    display: flex;
+    font-weight: bold;
+    padding-left: 10px;
+    background-color: rgb(50, 166, 222);
+    align-items: flex-end;
+    text-align: center;
+    border-bottom: 2px solid white;
+    line-height: 25px;
+    font-size: 12px;
+}
+
+.oddsTableHeadGame>div:not(:first-child) {
+    font-size: 12px;
+}
+
+.oddsTableScore {
+    flex: 1;
+    text-align: right;
+    color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.oddsTableScore div {
+    flex: 1;
+}
+
+.oddsTableHeadStatus {
+    flex: 3.8;
+    color: white;
+    font-size: 16px;
+    align-self: center;
+    text-align: left;
+}
+
+.oddsTableSingle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    font-weight: 700;
+}
+
+.oddsTableSpread,
+.oddsTableOverUnder {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+.oddsTableCurrentGame>.oddsTableOverUnder {
+    border-right: 1px dotted rgb(146, 144, 144);
+}
+
+.oddsTableCurrentGame>.oddsTableOverUnder~.oddsTableOverUnder {
+    border: none
+}
+
+.oddsTableHeadGame .oddsTableSpread div:nth-of-type(1) {
+    color: rgb( 130, 144, 151);
+}
+
+.oddsTableStar {
+    flex: 1;
+    text-align: right;
+}
+
+.oddsTableStar div {
+    flex: 1;
+}
+
+.oddsTableTeam {
+    display: flex;
+    background-color: rgb(217, 225, 234);
+    padding-left: 10px;
+    border-bottom: 1px solid rgb(50, 166, 222);
+    height: 40px;
+    align-items: center;
+}
+
+.oddsTableTeam div:first-child {
+    font-size: 15px;
+    line-height: 35px;
+    font-weight: bold;
+    flex: 14;
+    color: rgb(50, 166, 222);
+}
+
+.oddsTableTeam div:last-child {
+    flex: 1;
+    text-align: right;
+    padding-right: 1px;
+}
+
+.oddsTableTeam img {
+    width: 15px;
+    height: 15px;
+}
+
+.oddsTableCurrentGame {
+    display: flex;
+    /* flex-wrap: wrap; */
+    text-align: center;
+    padding-left: 10px;
+    font-size: 13px;
+}
+
+.oddsTableCurrentGameTime {
+    flex: 1;
+    line-height: 16px;
+    margin: auto;
+}
+
+.oddsTableTeam+.oddsTableCurrentGame {
+    border-bottom: 1px dotted gray;
+    background-color: rgb( 239, 247, 255);
+}
+
+.oddsTableHeadGameTitle>.oddsTableScoreKind~.oddsTableScoreKind .oddsTableTeam+.oddsTableCurrentGame {
+    border-bottom: 1px dotted gray;
+    background-color: rgb( 242, 238, 255);
+}
+
+.oddsTableCurrentGameTime div:nth-of-type(4) {
+    background-color: rgb(77, 195, 77);
+    display: inline;
+    padding: 0px 3px;
+    color: white;
+    font-size: 12px;
+}
+
+.oddsTableCurrentGameTime div:first-child {
+    color: rgb(50, 166, 222);
+}
+
+.oddsTableCurrentTeams {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+
+/* .oddsTableCurrentTeams div {} */
+
+.oddsTableCurrentTeams div:nth-of-type(1) {
+    color: rgb(8, 8, 112);
+    /* max-height: 25px; */
+}
+
+.oddsTableCurrentTeams div:nth-of-type(2) {
+    color: rgb(197, 13, 13);
+}
+
+.oddsTableCurrentTeams div:nth-of-type(3) {
+    color: rgb(8, 8, 112);
+    position: relative;
+}
+
+.oddsTableCurrentTeams div:nth-of-type(3) span {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 3px;
+    line-height: 13px;
+    width: 23px;
+    position: absolute;
+    top: 2px;
+    right: 0px;
+    color: black;
+    cursor: pointer;
+}
+
+.oddsTableHeadGameBasketball {
+    /* margin: 0ps; */
+    flex: 9;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    height: 50px;
+    /* padding-bottom: 40px; */
+}
+
+.oddsTableHeadGameBasketball {
+    color: rgb(130, 144, 151);
+    font-size: 12px;
+}
+
+.oddsTableHeadStatusBasketball {
+    flex: 2;
+    color: white;
+    text-align: left;
+    font-size: 16px;
+}
+
+.oddsTableSingleBasketball {
+    flex: 0.5;
+}
+
+.oddsTableSpreadScoreBasketball {
+    flex: 0.5;
+    color: rgb(224, 77, 28);
+    text-align: right;
+}
+
+.oddsTableSpreadBasketball {
+    font-weight: bold;
+    flex: 0.5;
+}
+
+.oddsTableOverUnderScoreBasketball {
+    flex: 0.5;
+    text-align: center;
+}
+
+.oddsTableOverUnderScoreBasketball div span:nth-of-type(2) {
+    color: rgb(224, 77, 28);
+}
+
+.oddsTableOverUnderBasketball {
+    flex: 0.5;
+    font-weight: bold;
+}
+
+.oddsTableTeamScoreBasketball {
+    flex: 0.5;
+}
+
+.oddsTableTeamBasketball {
+    flex: 0.6;
+}
+
+.oddsTableTeamBasketballEnsp {
+    flex: 0.5;
+}
+
+.oddsTableTeamBasketballItem {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(50, 166, 222);
+    margin-top: -2px;
+    font-family: arial, PMingLiu, sans-serif;
+}
+
+.oddsTableTeamBasketballItem div {
+    margin-left: 20px;
+    color: white;
+    font-size: 12px;
+}
+
+.oddsTableCurrentGameBasketball {
+    display: flex;
+    /* width: auto; */
+    text-align: center;
+    padding-left: 10px;
+    font-size: 13px;
+    line-height: 30px;
+    border-top: 1px dotted gray;
+    background-color: rgb( 255, 251, 251);
+}
+
+.oddsTableCurrentGameTimeBasketball {
+    flex: 0.6;
+    line-height: 20px;
+    margin: auto;
+    color: rgb(138, 138, 138);
+    font-size: 12px;
+}
+
+.oddsTableCurrentGameTimeBasketball div:first-child {
+    color: rgb(50, 166, 222);
+}
+
+.oddsTableCurrentTeamsBasketball {
+    flex: 1.4;
+    line-height: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: rgb(105, 130, 171);
+    font-size: 13px;
+}
+
+.oddsTableCurrentGameBasketball+.oddsTableCurrentGameBasketball .oddsTableCurrentTeamsBasketball div:nth-of-type(2) {
+    color: rgb(211, 95, 94)
+}
+
+.oddsTableTeamoverUnderScoreBasketball {
+    flex: 0.8;
+}
+
+.oddsTableTeamoverUnderBasketball {
+    flex: 0.8;
+}
+
+.oddsTableStarBasketball {
+    flex: 0.5;
+    text-align: right;
+}
+
+.oddsTableScoreKind .oddsTableOverUnderBasketball {
+    border-right: 1px dotted gray;
+}
+
+.oddsTableCurrentTeamsBasketball div:nth-of-type(2) {
+    position: relative;
+}
+
+.oddsTableCurrentTeamsBasketball div:nth-of-type(2) span {
+    border: 1px solid rgb(73, 72, 72);
+    background-color: white;
+    border-radius: 3px;
+    line-height: 15px;
+    width: 25px;
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    color: black;
+    font-size: 10pt;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+img[src="images/star_white.svg"] {
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+.oddsTableHeadGameTitle img[src="images/star.svg"] {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    font-size: 13pt;
+    cursor: pointer;
+    /* padding-right: 10px; */
+}
+
+.jsAddSoccer {
+    position: absolute;
+    top: 28px;
+    left: 230px;
+    width: 76%;
+    height: 874px;
+    visibility: hidden;
+}
