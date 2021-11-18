@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event-bus</title>
+    <style>
+      input {
+        margin-bottom: 1rem;
+        display: block;
+      }
+      .component {
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <custom-elem1></custom-elem1>
+      <hr />
+      <custom-elem2></custom-elem2>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js"></script>
+    <script>
+      // event bus中繼站可元件更新至元件
+      const bus = new Vue();
+      Vue.component("custom-elem1", {
+        template: `<div class="custom-elem1">
+                      <input v-model="msg"><button @click="submit">Submit</button>
+                   </div>`,
+        methods: {
+          submit() {
+            bus.$emit("receive", this.msg);
+          },
+        },
+        data() {
+          return {
+            msg: 4556,
+          };
+        },
+      });
+
+      Vue.component("custom-elem2", {
+        template: `<div class="custom-elem2">{{ msg }}</div>`,
+        created() {
+          const that = this;
+          // console.log(this);
+          bus.$on("receive", function (newMsg) {
+            that.msg = newMsg;
+            // console.log("bus:" + this);
+          });
+        },
+        data() {
+          return {
+            msg: "123",
+          };
+        },
+      });
+
+      const vm = new Vue({
+        el: "#app",
+      });
+    </script>
+  </body>
+</html>

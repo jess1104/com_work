@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>component</title>
+    <style>
+      .input-model {
+        margin-bottom: 1rem;
+        display: block;
+      }
+      .component {
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <button-component :count="counts"></button-component>
+      <button-component :count="counts"></button-component>
+      <input-component :my-name="name" @name="nameHandler"></input-component>
+      <input-component :my-name="name" @name="nameHandler"></input-component>
+      <input type="text" v-model="name" />
+      <p>{{name}}</p>
+      <my-component :parent-msg="message"></my-component>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js"></script>
+    <script>
+      Vue.component("button-component", {
+        template: `<div class="component"><span>{{c}}</span>-<button @click="c++">add</button></div>`,
+        props: ["count"],
+        data() {
+          return {
+            c: this.count.num,
+          };
+        },
+      });
+      Vue.component("input-component", {
+        props: ["myName"],
+        template: `<input class="input-model" type="text" :value="myName" @input="enterName" />`,
+        methods: {
+          enterName(event) {
+            console.log(event.target.value);
+            console.log(this);
+            this.$emit("name", event.target.value);
+          },
+        },
+      });
+      Vue.component("my-component", {
+        template: `<span>{{parentMsg}}<input v-model="message">{{message}}</span>`,
+        props: {
+          parentMsg: String,
+        },
+        data() {
+          return {
+            message: this.parentMsg,
+          };
+        },
+      });
+
+      const vm = new Vue({
+        el: "#app",
+        data: {
+          name: "111",
+          counts: {
+            num: 0,
+          },
+          message: "Hello",
+        },
+        methods: {
+          nameHandler(value) {
+            this.name = value;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
