@@ -1,0 +1,49 @@
+// 變數使用
+$primary-color: #272727;
+$text-color: #fff;
+$auto: 0 auto;
+$mobile: 800px;
+// map-get
+$font-weights: (
+    'regular': 400,
+    'medium': 600,
+    'bold': 800,
+);
+// mixin使用
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    // 變數為$符號
+    background: $primary-color;
+    color: $text-color;
+    // map-get
+    font-weight: map-get($font-weights, bold);
+}
+h1 {
+    width: 80%;
+    margin: $auto;
+}
+.main {
+    width: 80%;
+    margin: 0 auto;
+    // 調用mixin要用include
+    @include flexCenter(row);
+    @include mobile {
+        flex-direction: column;
+    }
+}

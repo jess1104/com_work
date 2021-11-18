@@ -1,0 +1,11 @@
+.home {
+    // 吃他的父層.main
+    height: 100%;
+    // 躲過nav-bar
+    padding-top: 40vh;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    // background: url(../img/model-1.jpg) center top;
+    background-size: cover;
+}
