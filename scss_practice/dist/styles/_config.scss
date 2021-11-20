@@ -1,8 +1,24 @@
 $primary-color: #272727;
-$secondary-color: #ffff652f;
+$secondary-color: #ff652f;
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+// 動畫效果漸進出
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+}
+
+// 一個方法(當背景淺，字為深色，反之)
+// 變數裡放背景色
+@function set-text-color($color) {
+    // lightness 方法是scss內建
+    @if (lightness($color) >40%) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
 }

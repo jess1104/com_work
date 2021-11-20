@@ -13,14 +13,28 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3)));
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3));
   background-size: cover;
+}
+
+.home__name {
+  font-size: 5rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #fff;
+}
+
+.home__name--last {
+  color: #ff652f;
+  font-weight: 700;
 }
 
 body {
   background: #272727;
   color: #fff;
   height: 100vh;
-  font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1;
 }
 
@@ -55,10 +69,12 @@ main .social-icons {
 
 main .social-icons a {
   padding: 0.4rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 main .social-icons a:hover {
-  color: #ffff652f;
+  color: #ff652f;
 }
 
 footer {
@@ -68,5 +84,6 @@ footer {
   right: 1rem;
   padding: 1rem;
   text-align: right;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
