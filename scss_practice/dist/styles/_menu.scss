@@ -1,0 +1,56 @@
+.menu-btn {
+    position: absolute;
+    z-index: 1;
+    right: 1rem;
+    top: 1rem;
+    height: 20px;
+    width: 28px;
+    cursor: pointer;
+    @include transition-ease;
+
+    &__burger {
+        position: absolute;
+        right: 0;
+        top: 0.5rem;
+        width: 28px;
+        height: 3px;
+        background: set-text-color($primary-color);
+        @include transition-ease;
+        // 上面的線
+        &::before {
+            content: "";
+            position: absolute;
+            top: -8px;
+            width: 28px;
+            height: 3px;
+            background: set-text-color($primary-color);
+            @include transition-ease;
+        }
+        // 底部的線
+        &::after {
+            content: "";
+            position: absolute;
+            top: 8px;
+            // 寬度較短
+            width: 20px;
+            height: 3px;
+            background: set-text-color($primary-color);
+            @include transition-ease;
+        }
+        // js控制出現X
+        &.open {
+            transform: rotate(720deg);
+            // 消失
+            background: transparent;
+            // 上面的線往右斜
+            &::before {
+                transform: rotate(45deg) translate(5px, 8px);
+            }
+            // 下面的線往左斜
+            &::after {
+                width: 28px;
+                transform: rotate(-45deg) translate(3px, -7px);
+            }
+        }
+    }
+}
